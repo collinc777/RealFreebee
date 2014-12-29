@@ -1,0 +1,62 @@
+.freebee-panel {
+  padding-bottom: 0% !important;
+}
+.freebee-btn-group{
+    margin-top: 30vh;
+}
+
+.freebee-icon {
+    margin-top: 5vh;
+    margin-bottom: auto;
+
+
+    height: 300px;
+    width: auto;
+    max-width: 90%;
+    max-height: 35%;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+    .freebee-icon{
+        margin-top: 50px;
+        height: 20%;
+    }
+}
+
+
+.freebee-background{
+    background-color:  rgb(255,253,167) ;
+}
+
+.freebee-btn-primary{
+    color: #ffffff;
+    background-color:  rgb(49,49,49);
+    border-color: rgb(49,49,49);
+    margin: 4%;
+    width: 300px;
+    max-width: 90%;
+    line-height: 5vh !important;
+}
+
+.freebee-btn-primary:hover,
+.freebee-btn-primary:focus,
+.freebee-btn-primary:active
+.freebee-btn-primary.active{
+    color: white !important;
+    background-color: black;
+
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+    .freebee-btn-primary{
+        color: #ffffff;
+        background-color:  rgb(49,49,49);
+        border-color: rgb(49,49,49);
+        margin: 40px;
+        width: 100px;
+    }
+}
