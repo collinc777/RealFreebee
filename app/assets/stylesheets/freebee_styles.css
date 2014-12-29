@@ -8,25 +8,21 @@
     margin-top: 30vh;
 }
 
-.freebee-icon {
+.freebee-homepage-icon {
     margin-top: 5vh;
     margin-bottom: auto;
 
+    height: 310px;
 
-    height: 300px;
-    width: auto;
+
     max-width: 90%;
-    max-height: 35%;
+    max-height: 35vh;
 }
 
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px) {
-    .freebee-icon{
-        margin-top: 50px;
-        height: 20%;
-    }
+.freebee-homepage-btn-icon-seperator {
+    margin-top: 25vh
 }
+
 
 
 .freebee-background{
@@ -52,14 +48,3 @@ and (max-device-width : 568px) {
 
 }
 
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px) {
-    .freebee-btn-primary{
-        color: #ffffff;
-        background-color:  rgb(49,49,49);
-        border-color: rgb(49,49,49);
-        margin: 40px;
-        width: 100px;
-    }
-}
