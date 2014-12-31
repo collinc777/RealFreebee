@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  #not sure what the proper name for business signup should be ..
+  get 'business/signp' =>  'businesses#new'
+
   root 'static_pages#home'
 
 
