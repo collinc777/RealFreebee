@@ -6,12 +6,11 @@
      <%= image_tag("freebeeiconfinal.png", :class => "freebee-homepage-icon") %>
 </div>
 <div class = "freebee-homepage-btn-icon-seperator">
-  <button type="button" class="btn freebee-btn-primary btn-lg">
-    Business
-  </button>
-  <button type="button" class="btn freebee-btn-primary btn-lg ">
-    HungryBee
-  </button>
+
+  <%= link_to "Business", business_signup_path, class: "btn
+                            freebee-btn-primary btn-lg" %>
+  <%= link_to "HungryBee", hungrybee_signup_path, class: "btn
+                            freebee-btn-primary btn-lg" %>
 </div>
 </body>
 </html>

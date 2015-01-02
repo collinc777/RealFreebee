@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'hungrybees/new'
+
 
   #not sure what the proper name for business signup should be ..
-  get 'business/signup'   => 'businesses#new'
-  get 'hungrybee/signup'  => 'hungrybees#new'
+  get 'business_signup'   => 'businesses#new'
+  get 'hungrybee_signup'  => 'hungrybees#new'
 
 
   root 'static_pages#home'
