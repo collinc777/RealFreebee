@@ -3,7 +3,9 @@ require 'test_helper'
 class HungryBeeTest < ActiveSupport::TestCase
 
   def setup
-    @hungrybee = HungryBee.new(name: "Example HungryBee", email: "hungrybee@example.com")
+    @hungrybee = HungryBee.new(name: "Example User", email: "hungrybee@example.com",
+                               password: "foobar", password_confirmation: "foobar")
+
   end
 
   test "should be valid" do
@@ -55,6 +57,9 @@ class HungryBeeTest < ActiveSupport::TestCase
     assert_not duplicate_hungrybee.valid?
   end
 
-
+  test "password should have a minimum length" do
+    @hungrybee.password = @hungrybee.password_confirmation = "a" * 5
+    assert_not @hungrybee.valid?
+  end
 
 end
