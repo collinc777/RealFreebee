@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  get 'hungrybees/new'
+
   #not sure what the proper name for business signup should be ..
-  get 'business/signp' =>  'businesses#new'
+  get 'business/signup'   => 'businesses#new'
+  get 'hungrybee/signup'  => 'hungrybees#new'
+
 
   root 'static_pages#home'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
