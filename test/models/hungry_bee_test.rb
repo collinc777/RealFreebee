@@ -4,7 +4,8 @@ class HungryBeeTest < ActiveSupport::TestCase
 
   def setup
     @hungrybee = HungryBee.new(name: "Example User", email: "hungrybee@example.com",
-                               password: "foobar", password_confirmation: "foobar")
+                               password: "foobar", password_confirmation: "foobar",
+                               phone_number: "7777777777")
 
   end
 
@@ -61,5 +62,19 @@ class HungryBeeTest < ActiveSupport::TestCase
     @hungrybee.password = @hungrybee.password_confirmation = "a" * 5
     assert_not @hungrybee.valid?
   end
+
+  test "phone number should be present" do
+    @hungrybee.phone_number = ""
+    assert_not @hungrybee.valid?
+  end
+
+  test "phone number should be unique" do
+    duplicate_hungrybee = @hungrybee.dup
+    duplicate_hungrybee.phone_number = @hungrybee.phone_number
+    @hungrybee.save
+    assert_not duplicate_hungrybee.valid?
+  end
+
+
 
 end

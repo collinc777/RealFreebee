@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150102223708) do
+ActiveRecord::Schema.define(version: 20150102233335) do
 
   create_table "businesses", force: true do |t|
     t.string   "name"
@@ -29,6 +29,9 @@ ActiveRecord::Schema.define(version: 20150102223708) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
+    t.string   "phone_number"
   end
+
+  add_index "hungry_bees", ["phone_number"], name: "index_hungry_bees_on_phone_number", unique: true
 
 end
