@@ -2,7 +2,8 @@ require 'test_helper'
 
 class HungrybeeTest < ActiveSupport::TestCase
   def setup
-    @hungrybee = Hungrybee.new(name: "collin", phone_number: "7136666666")
+    @hungrybee = Hungrybee.new(name: "collin", phone_number: "7136666666",
+                                password: "foobar", password_confirmation: "foobar")
   end
 
   test "should be valid" do
@@ -41,6 +42,12 @@ class HungrybeeTest < ActiveSupport::TestCase
     duplicate_hb.phone_number = @hungrybee.phone_number
     @hungrybee.save
     assert_not duplicate_hb.valid?
+  end
+
+  #test for passwords
+  test "password should have a minimum length" do
+    @hungrybee.password = @hungrybee.password_confirmation = "a" * 5
+    assert_not @hungrybee.valid?
   end
 
 
