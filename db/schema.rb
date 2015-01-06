@@ -11,27 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150102233335) do
+ActiveRecord::Schema.define(version: 20150106213558) do
 
-  create_table "businesses", force: true do |t|
+  create_table "hungrybees", force: true do |t|
     t.string   "name"
-    t.string   "email"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "password_digest"
-  end
-
-  add_index "businesses", ["email"], name: "index_businesses_on_email", unique: true
-
-  create_table "hungry_bees", force: true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "password_digest"
     t.string   "phone_number"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
-  add_index "hungry_bees", ["phone_number"], name: "index_hungry_bees_on_phone_number", unique: true
+  add_index "hungrybees", ["phone_number"], name: "index_hungrybees_on_phone_number", unique: true
 
 end
