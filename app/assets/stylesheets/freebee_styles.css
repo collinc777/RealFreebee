@@ -35,8 +35,16 @@
 .freebee-background{
     background-color:  rgb(255,253,167) ;
 }
-
 .freebee-btn-primary{
+    color: #ffffff;
+    background-color:  rgb(49,49,49);
+    border-color: rgb(49,49,49);
+    width: 300px;
+    max-width: 90%;
+    line-height: 5vh !important;
+}
+
+.freebee-btn-primary-homepage{
     color: #ffffff;
     background-color:  rgb(49,49,49);
     border-color: rgb(49,49,49);
@@ -55,9 +63,7 @@
 
 }
 
-.freebee-btn-primary-homepage{
 
-}
 
 
 /* miscellaneous */
@@ -83,3 +89,20 @@ input, textarea, select, .uneditable-input {
 input {
     height: auto !important;
 }
+
+#error_explanation {
+    color: red;
+
+    ul {
+        color: red;
+        margin: 0 0 30px 0;
+    }
+}
+
+.field_with_errors {
+    @extend .has-error;
+    .form-control {
+        color: $state-danger-text;
+    }
+}
+

@@ -27,13 +27,13 @@ class HungrybeeTest < ActiveSupport::TestCase
     assert_not @hungrybee.valid?
   end
 
-  test "phone number should be 10 characters" do
-    @hungrybee.phone_number = "17136675645"
+  test "phone number should be all numbers" do
+    @hungrybee.phone_number = "adb5115987"
     assert_not @hungrybee.valid?
   end
 
-  test "phone number should be all numbers" do
-    @hungrybee.phone_number = "adb5115987"
+  test "phone number should be 10 characters" do
+    @hungrybee.phone_number = "17136675645"
     assert_not @hungrybee.valid?
   end
 
