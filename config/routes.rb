@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
 
 
+  root 'static_pages#home'
   #not sure what the proper name for business signup should be ..
   get 'business_signup'   => 'businesses#new'
   get 'hungrybee_signup'  => 'hungrybees#new'
+  get 'hungrybee_login'   => 'sessions#new'
+  post 'hungrybee_login'            => 'sessions#create'
+  delete 'hungrybee_logout'         => 'sessions#destroy'
 
-
-  root 'static_pages#home'
 
   resources :hungrybees
 

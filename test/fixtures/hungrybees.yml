@@ -1,0 +1,4 @@
+collin:
+  name: Collin example
+  phone_number: 7136666666
+  password_digest: <%= Hungrybee.digest('password') %>

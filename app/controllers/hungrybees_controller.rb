@@ -10,6 +10,7 @@ class HungrybeesController < ApplicationController
   def create
     @hungrybee = Hungrybee.new(hungrybee_params)
     if @hungrybee.save
+      log_in @hungrybee
       flash[:success] = "Welcome to Freebee!"
       redirect_to @hungrybee
     else

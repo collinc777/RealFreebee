@@ -13,14 +13,15 @@ class HungrybeesSignupTest < ActionDispatch::IntegrationTest
     assert_template 'hungrybees/new'
   end
 
-  test "valid signup infromation" do
+  test "valid signup information" do
     get hungrybee_signup_path
     assert_difference 'Hungrybee.count', 1 do
       post_via_redirect hungrybees_path, hungrybee: { name: "Example name",
-                                                      phone_number: "7136666666",
+                                                      phone_number: "7137777777",
                                                       password: "password",
                                                       password_confirmation: "password" }
     end
     assert_template 'hungrybees/show'
+    assert is_logged_in?
   end
 end

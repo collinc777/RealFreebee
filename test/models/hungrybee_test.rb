@@ -2,7 +2,7 @@ require 'test_helper'
 
 class HungrybeeTest < ActiveSupport::TestCase
   def setup
-    @hungrybee = Hungrybee.new(name: "collin", phone_number: "7136666666",
+    @hungrybee = Hungrybee.new(name: "follin", phone_number: "7136667666",
                                 password: "foobar", password_confirmation: "foobar")
   end
 
@@ -50,6 +50,8 @@ class HungrybeeTest < ActiveSupport::TestCase
     assert_not @hungrybee.valid?
   end
 
-
+  test "authenticated? should return false for a hungrybee with nil digest" do
+    assert_not @hungrybee.authenticated?('')
+  end
 
 end
