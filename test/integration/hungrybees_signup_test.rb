@@ -19,7 +19,7 @@ class HungrybeesSignupTest < ActionDispatch::IntegrationTest
       post_via_redirect hungrybees_path, hungrybee: { name: "Example name",
                                                       phone_number: "7137777777",
                                                       password: "password",
-                                                      password_confirmation: "password" }
+                                                      password_confirmation: "password", is_registered?: true }
     end
     assert_template 'hungrybees/show'
     assert is_logged_in?

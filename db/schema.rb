@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150113213244) do
+ActiveRecord::Schema.define(version: 20150125200802) do
 
   create_table "hungrybees", force: true do |t|
     t.string   "name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150113213244) do
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
     t.string   "remember_digest"
+    t.boolean  "is_registered?"
   end
 
   add_index "hungrybees", ["phone_number"], name: "index_hungrybees_on_phone_number", unique: true

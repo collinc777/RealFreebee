@@ -7,6 +7,7 @@ class Hungrybee < ActiveRecord::Base
             uniqueness: true
   has_secure_password
   validates :password, length: { minimum: 6 }
+  validates :is_registered?, presence:true
 
   def Hungrybee.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
