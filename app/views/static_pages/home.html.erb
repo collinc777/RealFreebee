@@ -1,16 +1,18 @@
-
-
 <html class="text-center">
-<body class="freebee-background text-center">
-<div class="panel-heading freebee-panel">
-     <%= image_tag("freebeeiconfinal.png", :class => "freebee-homepage-icon") %>
-</div>
-<div class = "freebee-homepage-btn-icon-seperator">
+	<body>
+		<%= stylesheet_link_tag    'normalize' %>
+		<%= stylesheet_link_tag    'codepen' %>
+		<%= stylesheet_link_tag    'freebee_styles' %>
+		<div>
+			<link href='http://fonts.googleapis.com/css?family=Oswald:700,300' rel='stylesheet' type='text/css'>
+				<div class="page">
+					<div class="rotator rotate-1"><h1>Freebee</h1></div>
+					<div class="rotator rotate-2"><h2 /></div>
+				</div>
 
-  <%= link_to "Business", business_signup_path, class: "btn
-                            freebee-btn-primary-homepage btn-lg" %>
-  <%= link_to "HungryBee", hungrybee_signup_path, class: "btn
-                            freebee-btn-primary-homepage btn-lg" %>
-</div>
-</body>
-</html>
+				<%= link_to image_tag('freebeelogo.png'), new_admin_session_path, class: "img" %>
+				<%= link_to "Click Here to Log In", new_admin_session_path, class: "login-text" %>
+
+			</div>
+		</body>
+	</html>

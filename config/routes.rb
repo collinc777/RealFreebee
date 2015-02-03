@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  devise_for :admins
+  devise_for :users
   root 'static_pages#home'
   #not sure what the proper name for business signup should be ..
   get 'business_signup'   => 'businesses#new'

@@ -1,16 +1,18 @@
 source 'https://rubygems.org'
 
-gem 'rails',                '4.2.0.rc3'
-gem 'phony_rails',          '0.8.2'
 gem 'bcrypt',               '3.1.7'
 gem 'bootstrap-sass',        '3.2.0.0'
-gem 'sass-rails',           '5.0.0.beta1'
-gem 'uglifier',             '2.5.3'
+gem 'bourbon'
 gem 'coffee-rails',         '4.1.0'
-gem 'jquery-rails',         '4.0.0.beta2'
-gem 'turbolinks',           '2.3.0'
+gem 'devise'
 gem 'jbuilder',             '2.2.3'
+gem 'jquery-rails',         '4.0.0.beta2'
+gem 'phony_rails',          '0.8.2'
+gem 'rails',                '4.2.0.rc3'
+gem 'sass-rails',           '5.0.0.beta1'
 gem 'sdoc',                 '0.4.0', group: :doc
+gem 'turbolinks',           '2.3.0'
+gem 'uglifier',             '2.5.3'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
