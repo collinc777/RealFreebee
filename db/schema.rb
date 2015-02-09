@@ -11,18 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150127032240) do
+ActiveRecord::Schema.define(version: 20141008172700) do
 
-  create_table "hungrybees", force: true do |t|
-    t.string   "name"
-    t.string   "phone_number"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "password_digest"
-    t.string   "remember_digest"
-    t.boolean  "registered"
+  create_table "points", force: true do |t|
+    t.datetime "date"
+    t.string   "category"
+    t.text     "description"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  add_index "hungrybees", ["phone_number"], name: "index_hungrybees_on_phone_number", unique: true
+  add_index "points", ["user_id"], name: "index_points_on_user_id"
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.string   "city"
+    t.string   "state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

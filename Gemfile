@@ -1,33 +1,48 @@
 source 'https://rubygems.org'
+ruby '2.1.1'
 
-gem 'rails',                '4.2.0.rc3'
-gem 'phony_rails',          '0.8.2'
-gem 'bcrypt',               '3.1.7'
-gem 'bootstrap-sass',        '3.2.0.0'
-gem 'sass-rails',           '5.0.0.beta1'
-gem 'uglifier',             '2.5.3'
-gem 'coffee-rails',         '4.1.0'
-gem 'jquery-rails',         '4.0.0.beta2'
-gem 'turbolinks',           '2.3.0'
-gem 'jbuilder',             '2.2.3'
-gem 'sdoc',                 '0.4.0', group: :doc
+gem 'rails', '4.1.5'
+gem 'sqlite3'
+gem 'sass-rails', '~> 4.0.3'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'turbolinks'
+
+gem 'rabl'      # API builder
+gem 'oj'        # JSON parser
+gem 'httparty'  # Makes http requests incredibly easy
+
+gem 'kaminari'  # adds pagination to ActiveModels
+
+gem 'sdoc', '~> 0.4.0',          group: :doc
+
+group :development do
+  gem 'powder'
+  gem 'better_errors'
+  gem 'binding_of_caller', :platforms=>[:mri_21]
+  gem 'meta_request'
+  gem 'xray-rails'
+
+  gem 'guard'
+  gem 'guard-bundler'
+  gem 'guard-minitest'
+  gem 'guard-pow'
+  gem 'guard-livereload'
+  gem 'rack-livereload'
+  gem 'ruby_gntp'
+
+  gem 'html2haml'
+  gem 'quiet_assets'
+  gem 'spring'
+end
 
 group :development, :test do
-  gem 'sqlite3',     '1.3.9'
-  gem 'byebug',      '3.4.0'
-  gem 'web-console', '2.0.0.beta3'
-  gem 'spring',      '1.1.3'
-  gem 'rspec-rails'
+  gem 'jazz_hands'
+  gem 'ffaker'
+  gem 'factory_girl_rails'
 end
 
 group :test do
-  gem 'minitest-reporters', '1.0.5'
-  gem 'mini_backtrace',     '0.1.3'
-  gem 'guard-minitest',     '2.3.1'
-end
-
-group :production do
-  gem 'pg',             '0.17.1'
-  gem 'rails_12factor', '0.0.2'
-  gem 'unicorn',        '4.8.3'
+  gem 'simplecov', :require => false
 end
